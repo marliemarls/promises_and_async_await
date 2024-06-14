@@ -31,6 +31,7 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
  * @return {String} The name of the database to look up the user.
  */
 export async function central(id) {
+
   if (typeof id !== "number") throw new Error("Invalid Input -- Not a Number");
   if (id < 1 || id > 10) throw new Error("Invalid Input -- Out of Range");
 
@@ -38,9 +39,9 @@ export async function central(id) {
   let db = "db1";
   if (id > 4) db = "db2";
   if (id > 7) db = "db3";
-
   return db;
 }
+
 
 /**
  * Accepts a user id value and returns an object containing
