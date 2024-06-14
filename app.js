@@ -10,7 +10,7 @@ function getUserData(id) {
     db2: db2,
     db3: db3
   };
-  return new Promise( (resolve) =>{ console.log(resolve)})
+  
 }
 
 console.log(getUserData(29))
